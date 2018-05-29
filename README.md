@@ -17,7 +17,7 @@ spec :
 function format : void mkdir(char keyword[])
 spec :
 1. The keyword's max length is 13 including '\0'
-2. Make a new directory that has the keyword as name in Current directory
+2. Make a new directory and set the keyword as name in Current directory
 3. If there is a directory that has same name with keyword, this command do nothing 
 
 
