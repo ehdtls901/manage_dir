@@ -1,3 +1,6 @@
+#ifndef __TREE_LINKEDLIST_H__
+#define __TREE_LINKEDLIST_H__
+
 typedef struct _dir{
     char name[13];
     int numOfDescendants;
@@ -8,9 +11,6 @@ typedef struct _dir{
     struct _dir* next;
 }DIR;
 
-DIR* ROOT;
-DIR* CURRENT;
-
 int mystrcmp(const char* first, const char* second);
 int mystrncmp(const char* first, const char* second, const int n);
 void mystrcpy(char* dest, const char* src);
@@ -18,8 +18,10 @@ void mystrncpy(char* dest, const char* src, const int n);
 
 
 void init();
-void mkdir(char* keyword);
-void rmdir(char* keyword);
-void cd(char* keyword);
-void find(char* keyword);
+void mkdir(char keyword[13]);
+int rmdir(char keyword[13]);
+void cd(char keyword[13]);
+int find(char keyword[13]);
+void printAll();
 
+#endif
